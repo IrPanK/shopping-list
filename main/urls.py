@@ -11,6 +11,8 @@ from main.views import (
     logout_user,
     edit_product,
     delete_product,
+    get_product_json,
+    add_product_ajax,
 )
 
 app_name = "main"
@@ -27,4 +29,6 @@ urlpatterns = [
     path("logout/", logout_user, name="logout"),
     path("edit-product/<int:id>", edit_product, name="edit_product"),
     path("delete/<int:id>", delete_product, name="delete_product"),
+    path("get-product/", get_product_json, name="get_product_json"),
+    path("create-product-ajax/", add_product_ajax, name="add_product_ajax"),
 ]
